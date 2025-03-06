@@ -1,14 +1,16 @@
-//
-//  main.cpp
-//  Highest Value
-//
-//  Created by Sam Hart on 06/03/2025.
-//
-
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    float userNumbers[10];
+    float highestValue = -1000000;
+    for (int numberOfInputs = 0; numberOfInputs < 10; numberOfInputs++){
+        std::cout << "Enter a number: ";
+        std::cin >> userNumbers[numberOfInputs];
+    }
+    for (int numberOfInputs = 0; numberOfInputs < 10; numberOfInputs++){
+        if (userNumbers[numberOfInputs] > highestValue){
+            highestValue = userNumbers[numberOfInputs];
+        }
+    }
+    std::cout << "The highest value you entered is " << highestValue << '\n';
 }
